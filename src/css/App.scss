@@ -1,0 +1,238 @@
+*, *:after, *:before {
+  box-sizing: border-box;}
+
+body {
+  padding: 1em;
+  background: #BE2933; }
+  
+#content {
+  margin: 0;
+  margin-top: 5px;
+  padding: 1em;
+  min-height: 15em;
+  border: 1px solid black;
+  background-color: white;
+  .bottom-content { clear: both; }
+  > .curuser {
+    margin-top: -1em;
+    margin-right: -1em;
+    float: right;
+    background: #333;
+    color: white;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: right;
+    line-height: 100%;
+    p {margin: 0.2em;}
+    a{color: white;}}}
+  
+ul.tab-navigation {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline;
+  li {
+    margin-left: 0;
+    margin-right: -10px;
+    padding: 2px 15px 5px;
+    border: 1px solid black;
+    background: white;
+    list-style: none;
+    display: inline;
+    border-top-left-radius: 15px;
+    &.active {
+      background: #333;
+      color: white;
+      position: relative;
+      z-index: 10;
+      text-transform: capitalize;
+      a {color: white;}}}}
+
+.toolbox {
+  float: right;
+  background-color: #bbb;
+  color: black;
+  border: 1px solid #777;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  h2 {
+    background-color: #888;
+    border-bottom: 1px solid #777;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 5px;}}
+
+tr.sect-head { 
+  td, th {
+  padding-top: 1em;
+  text-decoration: underline;}}
+  
+.pretty-table {
+  border-collapse: collapse;
+  margin: 0.5em;
+  th, td, caption {
+    border: 1px solid black;
+    padding: 2px;}
+  .table-header, th, caption {
+    font-weight: bold;
+    background: #BE2933;
+    a {color: #008;}}
+  caption {border-bottom: none;}}
+
+
+table.group-list tbody th {text-align: left;}
+
+dl dt {font-weight: bold;}
+
+ul.errorlist {color: red;}
+
+.messagebox {
+  padding: 0 10px 10px 10px;
+  margin: 2em 0;
+  border: 1px solid;
+  width: 50%;
+  > h3 {
+  margin: 0 -10px;
+  padding: 2px 10px;
+  margin-bottom: 1em;}}
+
+.infobox {
+  background-color: #afa;
+  border-color: #0f0;
+  h3 {background: #6f6;}}
+
+.warnbox {
+  background-color: #ffdf60;
+  border-color: #ffbf00;
+  h3 {background: #faba00;}}
+
+.errorbox {
+  background-color: #faa;
+  border-color: red;
+  h3 {background: #f88;}}
+
+span.username {font-family: "Courier", monospace;}
+
+/********
+* FYSM *
+********/
+.single-fysm-entry h3, .fysm-summarystrip h3 {
+  margin: 0 0 5px 0;
+  padding: 2px 10px;
+  background: #BE2933;}
+
+.single-fysm-entry h3 a, .fysm-navstrip a, .fysm-summarystrip a {
+  color:#fcfcfc;
+  text-decoration: none;
+  &:hover {text-decoration: underline;}}
+
+.single-fysm-entry {
+  max-width: 600px;
+  clear: both;
+  border: 1px solid #666;
+  margin: 10px auto;
+  .logo, .nologo {
+    float: left;
+    width: 100px;
+    background: #eee;
+    border: 2px solid black;
+    margin: 10px 20px 10px;
+    text-align: center;}
+  .logo img {
+    max-width: 100px;
+    max-height: 100px;}
+  .nologo {
+    height: 100px;
+    line-height: 90px;}
+  .fysm-body {margin-bottom: 10px;}
+  .data {
+    text-align: justify;
+    margin: 10px 20px;}
+  .join {
+  clear: both;
+  margin: 10px 20px;}
+  .tags {
+    background: #ddd;
+    border-top: 1px solid #666;
+    padding: 4px;
+    margin: 0px;
+    text-align: center;
+    font-size: smaller;}}
+
+.fysm-submit td {
+  max-width: 30em;
+  font-size: smaller;}
+
+.fysm-detail .back, .fysm-summarystrip .contact { text-align: left;  float: left; }
+.fysm-detail .forward, .fysm-summarystrip .website { text-align: right; float: right; }
+.fysm-detail .up, .fysm-summarystrip .display-name { text-align: center; margin: auto; }
+
+.fysm-navstrip, .fysm-summarystrip {
+  clear: both;
+  margin: 0;
+  padding: 0.5em 1em;
+  background: #BE2933;
+  border-bottom: 1px solid black;
+  p {
+    margin: 0;
+    min-width: 30%;}}
+
+.fysm-detail {
+  .single-fysm-entry h3 {
+    text-align: center;
+    clear: both;}
+  .join-preview {
+    max-width: 600px;
+    margin: 1em auto; 
+    img{
+      max-width: 600px;
+      max-height: 600px;
+      display: block;}}}
+
+/*****************
+* GROUP DISPLAY *
+*****************/
+tr.private-info th:before {content: "\2020  ";}
+
+.group-detail-page h1 + p.group-status { margin-top: -1em; margin-bottom: 2em; }
+.group-detail-page.group-status-active h1          { color: black; }
+.group-detail-page.group-status-applying h1        { color: red; }
+.group-detail-page.group-status-nge h1             { color: #00ffff; }
+.group-detail-page.group-status-provisional h1     { color: yellow; }
+.group-detail-page.group-status-derecognized h1    { color: red; }
+.group-detail-page.group-status-suspended h1       { color: yellow; }
+
+.group-list-page tr.group-status-active.group-active-True td.group-status{
+  background-color: green;
+  color: black;}
+  
+.group-list-page tr.group-active-True td.group-status {
+  background-color: yellow;
+  color: black;}
+  
+.group-list-page tr.group-active-False td.group-status{
+  background-color: red;
+  color: black;}
+  
+.group-list-page tr.group-status-nge td.group-status {
+  background-color: #00ffff;
+  color: black;}
+
+/* Reset some stuff */
+h1, h2, h3, th, .table-header {font-family: "Trebuchet MS", sans-serif;}
+
+ul {
+  padding-left: 1em;
+  margin-left: 0;}
+
+table.group-update-people-change td {
+  text-align: center;}
+
+/*********
+* FORMS *
+*********/
+
+form table tr.optional th {
+  font-weight: normal;
+  font-style: italic;}
