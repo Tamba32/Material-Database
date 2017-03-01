@@ -210,6 +210,23 @@
   z-index: 100;
   max-heigt: 200px; }
 
+.mf-select-dropdown-menu .cross-fade2-leave {
+  opacity: 1; }
+
+.mf-select-dropdown-menu .cross-fade2-leave.cross-fade2-leave-active {
+  opacity: 0;
+  transition: opacity .28s ease-in; }
+
+.mf-select-dropdown-menu .cross-fade2-enter {
+  opacity: 0; }
+
+.mf-select-dropdown-menu .cross-fade2-enter.cross-fade2-enter-active {
+  opacity: 1;
+  transition: opacity .28s ease-in; }
+
+.cross-fade2-height {
+  transition: height .28s ease-in-out; }
+
 .mf-select-dropdown-menu ul, .mf-select-dropdown-menu li {
   list-style: none;
   margin: 0;
@@ -237,18 +254,41 @@
 .mdl-textfield {
   position: relative;
   font-size: 16px;
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   width: 100px;
   max-width: 100%;
-  margin: 0;
+  margin: 0 15px;
   padding: 20px 0; }
+
+.mdl-textfield__input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  display: block;
+  font-size: 16px;
+  margin: 0;
+  padding: 4px 0;
+  width: 100%;
+  background: 0 0;
+  text-align: left;
+  color: inherit; }
+
+.mdl-textfield__input:focus {
+  outline-offset: -2px; }
+
+.isFocused .mdl-textfield__input {
+  outline: none; }
 
 .isFocused .mdl-textfield__label {
   color: #3f51b5;
   font-size: 12px;
   top: 4px;
   visibility: visible; }
+
+.isFocused .mdl-textfield__label:after {
+  left: 0;
+  visibility: visible;
+  width: 100%; }
 
 .mdl-textfield__label {
   transition-duration: .2s;
@@ -266,6 +306,18 @@
   overflow: hidden;
   white-space: nowrap;
   text-align: left; }
+
+.mdl-textfield__label:after {
+  background-color: #3f51b5;
+  bottom: 20px;
+  content: '';
+  height: 2px;
+  left: 45%;
+  position: absolute;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  width: 10px; }
 
 /*****************************************************************************/
 /* Dropdown: Style */
@@ -379,7 +431,6 @@
   line-height: 40px;
   max-height: 40px;
   min-height: 40px;
-  background-color: #ffffff;
   font-size: 14px;
   font-weight: 400;
   color: #616161;
@@ -391,17 +442,15 @@
 .song-row .row-cell a {
   text-decoration: none; }
 
-.song-row [data-col="title"] {
+.song-row .row-cell[data-col="title"] {
+  overflow: visible;
   color: black; }
 
 .song-row:hover {
   background-color: #eeeeee; }
 
-.song-row:hover .bold {
+.song-row:hover .row-cell .column-content .bold {
   font-weight: 500; }
-
-.song-row:hover div {
-  background-color: #eeeeee; }
 
 .column-content {
   display: block;
@@ -443,9 +492,6 @@
   position: relative;
   padding: 8px;
   outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   z-index: 0;
@@ -454,8 +500,7 @@
   width: 35px;
   height: 40px;
   -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: transparent;
-  box-sizing: border-box !important; }
+  -webkit-tap-highlight-color: transparent; }
 
 .paper-icon-button-0 a {
   color: unset; }
@@ -478,4 +523,42 @@
 
 /*****************************************************************************/
 /* Table: Style */
+/*****************************************************************************/
+/*****************************************************************************/
+/* Tooltip: Style */
+/*****************************************************************************/
+.mdl-tooltip.is-active {
+  animation: pulse 200ms cubic-bezier(0, 0, 0.2, 1) forwards; }
+
+.mdl-tooltip {
+  transform: scale(0) translateX(-50%);
+  transform-origin: top center;
+  z-index: 999;
+  background: rgba(97, 97, 97, 0.9);
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  max-width: 170px;
+  position: absolute;
+  line-height: 12px;
+  font-size: 12px;
+  padding: 10px;
+  top: 30px;
+  left: 50%;
+  text-align: center; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0) translateX(-50%);
+    opacity: 0; }
+  50% {
+    transform: scale(0.99) translateX(-50%); }
+  100% {
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
+    visibility: visible; } }
+
+/*****************************************************************************/
+/* Tooltip: Style */
 /*****************************************************************************/

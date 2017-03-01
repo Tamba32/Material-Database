@@ -619,7 +619,7 @@ const GROUPS = [
     groupStatus: 'Active',
     groupClass: 'Club Sport',
     groupFunding: 'sports council',
-    website: 'http://web.mit.edu/jiu-jitsu/www',
+    website: 'http://jiu-jitsu.scripts.mit.edu/wiki/index.php?title=Main_Page',
     desc: 'At AJJ@MIT, we train in practical and effective self-defense – both traditional and modern. We welcome all body types, fitness, and experience levels. Jiu-Jitsu, or the "Gentle Art," is designed to prepare a person for any situation, including stand-up and ground fighting (with and without weapons) and multiple attacks.',
     meetingTime: 'M 9-11PM W 9-11PM R 9-11PM Su 3-5PM',
     size: {

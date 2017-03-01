@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400);
+//#D32F2F
 
 $material-red: rgb(244, 67, 54);
 $grey: #616161;
@@ -13,16 +14,14 @@ $grey: #616161;
 #new-page {
   font-family: "Roboto", sans-serif;
   width: 80vw;
-  margin: 100px auto;
-}
+  margin: 100px auto;}
 
 .jumbotron {
   background: #fff;
   padding: 50px;
   margin-bottom: 30px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  font-weight: 300;
-}
+  font-weight: 300;}
 
 /*****************************************************************************/
 /* Buttons: Style */
@@ -194,7 +193,19 @@ $grey: #616161;
   -webkit-transition: max-height 0.28s ease;
   transition: max-height 0.28s ease;
   z-index: 100;
-  max-heigt: 200px;}
+  max-heigt: 200px;
+  .cross-fade2-leave {
+    opacity: 1;
+    &.cross-fade2-leave-active {
+      opacity: 0;
+      transition: opacity .28s ease-in;}}
+  .cross-fade2-enter {
+    opacity: 0;
+    &.cross-fade2-enter-active {
+      opacity: 1;
+      transition: opacity .28s ease-in;}}}
+  .cross-fade2-height {transition: height .28s ease-in-out;}
+
 
 .mf-select-dropdown-menu ul, .mf-select-dropdown-menu li {
   list-style: none;
@@ -219,22 +230,41 @@ $grey: #616161;
 .mf-select-open .mf-select-dropdown-menu {
   max-height: 200px;}
   
-
 .mdl-textfield {
   position: relative;
   font-size: 16px;
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   width: 100px;
   max-width: 100%;
-  margin: 0;
+  margin: 0 15px;
   padding: 20px 0;}
   
-.isFocused .mdl-textfield__label {
-  color: #3f51b5;
-  font-size: 12px;
-  top: 4px;
-  visibility: visible;}
+.mdl-textfield__input {
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  display: block;
+  font-size: 16px;
+  // font-family: "Helvetica","Arial",sans-serif;
+  margin: 0;
+  padding: 4px 0;
+  width: 100%;
+  background: 0 0;
+  text-align: left;
+  color: inherit;
+  &:focus{outline-offset: -2px;}}
+  
+.isFocused {
+  .mdl-textfield__input {outline: none;}  
+  .mdl-textfield__label {
+    color: #3f51b5;
+    font-size: 12px;
+    top: 4px;
+    visibility: visible;
+    &:after {
+      left: 0;
+      visibility: visible;
+      width: 100%;}}}
 
 .mdl-textfield__label {
   transition-duration: .2s;
@@ -252,8 +282,17 @@ $grey: #616161;
   overflow: hidden;
   white-space: nowrap;
   text-align: left;
-}
-  
+  &:after {
+    background-color: #3f51b5;
+    bottom: 20px;
+    content: '';
+    height: 2px;
+    left: 45%;
+    position: absolute;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    visibility: hidden;
+    width: 10px;}}
 /*****************************************************************************/
 /* Dropdown: Style */
 /*****************************************************************************/
@@ -359,7 +398,7 @@ $grey: #616161;
     line-height: 40px;
     max-height: 40px;
     min-height: 40px;
-    background-color: #ffffff;
+    // background-color: #ffffff;
     font-size: 14px;
     font-weight: 400;
     color: $grey;
@@ -367,12 +406,14 @@ $grey: #616161;
     overflow: hidden;
     text-overflow: ellipsis;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    a {text-decoration: none;}}
-  [data-col="title"] {color: black;}
-  
-  &:hover {background-color: #eeeeee;
-    .bold {font-weight: 500;}
-    div {background-color: #eeeeee;}}}
+    a {text-decoration: none;}
+    &[data-col="title"] {
+      overflow: visible;
+      color: black;}}
+  &:hover {
+    background-color: #eeeeee;
+    // [data-col="title"] {color: blue;}
+    .row-cell .column-content .bold {font-weight: 500;}}}
   
 .column-content {
   display: block;
@@ -408,9 +449,6 @@ $grey: #616161;
   position: relative;
   padding: 8px;
   outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   z-index: 0;
@@ -420,7 +458,6 @@ $grey: #616161;
   height: 40px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
-  box-sizing: border-box !important;
   a {color: unset};
   i.icon {
     font-size: 18px;
@@ -436,5 +473,46 @@ $grey: #616161;
 /*****************************************************************************/
 /* Table: Style */
 /*****************************************************************************/
+/*****************************************************************************/
+/* Tooltip: Style */
+/*****************************************************************************/
 
+.mdl-tooltip.is-active {
+  animation: pulse 200ms cubic-bezier(0,0,.2,1)forwards;
+}
 
+.mdl-tooltip {
+  transform: scale(0) translateX(-50%);
+  transform-origin: top center;
+  z-index: 999;
+  background: rgba(97,97,97,.9);
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  max-width: 170px;
+  position: absolute;
+  // padding: 8px;
+  line-height: 12px;
+  font-size: 12px;
+  padding: 10px;
+  top: 30px;
+  left: 50%;
+  // transform: translateX(-50%);
+  text-align: center;
+  // animation-name: tamba;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0) translateX(-50%);
+    opacity: 0;}
+  50% {
+    transform: scale(.99) translateX(-50%);}
+  100% {
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
+    visibility: visible;}}
+/*****************************************************************************/
+/* Tooltip: Style */
+/*****************************************************************************/

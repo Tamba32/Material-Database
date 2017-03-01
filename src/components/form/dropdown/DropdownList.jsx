@@ -20,13 +20,16 @@ class DropdownList extends React.Component {
       <ReactCSSTransitionReplace
         key={0}
         transitionName="cross-fade2" 
-        transitionEnterTimeout={500}
-        transitionLeaveTimeout={500}>
-        <div className="mf-select-dropdown-menu">
-          <ul>
-            {this.items}
-          </ul>
-        </div>
+        transitionEnterTimeout={280}
+        transitionLeaveTimeout={280}>
+        {this.props.isOpened ?
+          <div className="mf-select-dropdown-menu">
+            <ul>
+              {this.items}
+            </ul>
+          </div> :
+          null
+        }
       </ReactCSSTransitionReplace>
     );
   }
@@ -53,7 +56,6 @@ class DropdownListContainer extends React.Component {
   }
   
   toggleDropdownState() {
-    console.log('hi')
     this.setState({isOpened: this.state.isOpened ? false : true});
   }
   
@@ -76,12 +78,10 @@ class DropdownListContainer extends React.Component {
         <div className="input" onClick={this.handleClick}>
           {this.props.filterState}
         </div>
-        {this.state.isOpened ? 
           <DropdownList choices={this.props.choices}
           handleCloseClick={this.handleCloseClick}
-          setFilterState={this.setFilterState}/> :
-          null
-        }
+          isOpened={this.state.isOpened}
+          setFilterState={this.setFilterState}/>
       </div>
     );
   }

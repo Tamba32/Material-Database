@@ -124,18 +124,6 @@ class GroupsPage extends React.Component {
     return (
       <div className="group-list-page">
         <Form {...this.filterProps}/>
-        {/*<div className={`mdl-textfield ${this.state.focused.name ? 'isFocused' : ''}`}>
-          <label className="mdl-textfield__label">Name</label>
-          <input type="text" 
-            value={this.state.search.name} 
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
-            onChange={this.handleNameChange} />
-        </div>*/}
-        <input type="text" 
-          value={this.state.search.abbreviation} 
-          onChange={this.handleAbbrevChange} placeholder="Abbreviation" />
-        {this.buttonGroups}
         <MaterialTable 
           // style="material" 
           groups={this.groups}

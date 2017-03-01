@@ -1,9 +1,11 @@
 import React from 'react';
 
+import IconButton from './IconButton.jsx';
+
 class TableRow extends React.Component {
   
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       hover: false
     };
@@ -29,14 +31,8 @@ class TableRow extends React.Component {
     if (isOpen || !this.state.hover) return;
     return (
       <div className="title-right-items">
-        <div className="paper-icon-button-0" disabled={!group.website}>
-          <a target="_blank" href={group.website ? group.website : ''}>
-            <i className="icon ion-ios-world-outline"></i>
-          </a>
-        </div>
-        <div className="paper-icon-button-0">
-          <i className="icon ion-android-more-vertical"></i>
-        </div>
+        <IconButton website={group.website} />
+        <IconButton />
       </div>
     );
   }
