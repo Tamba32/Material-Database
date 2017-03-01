@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Pages from './pages/Pages.jsx';
-import './css/App.css';
-import './css/New.css';
-import './css/table2.css';
+import './css/old.css';
+import './css/new.css';
+// import './css/table2.css';
 
 class App extends Component {
   render() {

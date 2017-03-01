@@ -28,7 +28,10 @@ class TableBody extends React.Component {
       (group[category] === buttons[category]) || (buttons[category] === 'All')));
     const searchTests = Object.keys(searches).map(search => {
       const searchValue = searches[search].trim().toLowerCase();
-      if (searchValue.length > 0) return group[search].toLowerCase().match(searchValue);
+      if (searchValue.length > 0) {
+        if (group[search] === null) return false;
+        return group[search].toLowerCase().match(searchValue);
+      }
       else return true;
     });
     return _.every(_.flatten([filterTests, searchTests]), test => test);
