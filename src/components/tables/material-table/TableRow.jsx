@@ -39,7 +39,7 @@ class TableRow extends React.Component {
   
   get nickname() {
     if (!this.state.hover || !this.props.group.nickname) return;
-    return ` (${this.props.group.nickname})`;
+    return this.props.group.nickname;
   }
   
   render() {
