@@ -257,14 +257,15 @@ $grey: #616161;
 .isFocused {
   .mdl-textfield__input {outline: none;}  
   .mdl-textfield__label {
-    color: #3f51b5;
-    font-size: 12px;
-    top: 4px;
-    visibility: visible;
+    // color: #3f51b5;
+    // font-size: 12px;
+    // top: 4px;
+    // visibility: visible;
     &:after {
       left: 0;
       visibility: visible;
-      width: 100%;}}}
+      width: 100%;}}
+  }
 
 .mdl-textfield__label {
   transition-duration: .2s;
@@ -293,6 +294,17 @@ $grey: #616161;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     visibility: hidden;
     width: 10px;}}
+.mdl-textfield__label {
+    color: #3f51b5;
+    font-size: 12px;
+    top: 4px;
+    visibility: visible;
+    &:after {
+      // left: 0;
+      // visibility: visible;
+      // width: 100%;
+      
+    }}
 /*****************************************************************************/
 /* Dropdown: Style */
 /*****************************************************************************/
@@ -413,7 +425,7 @@ $grey: #616161;
   &:hover {
     background-color: #eeeeee;
     // [data-col="title"] {color: blue;}
-    .row-cell .column-content .bold {font-weight: 500;}}}
+    .row-cell .column-content .bold {font-weight: 600;}}}
   
 .column-content {
   display: block;

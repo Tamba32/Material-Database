@@ -24,7 +24,7 @@ const GROUP_PROPERTIES = [
     id: 'groupFunding',
     type: '',
     title: 'Group Funding',
-    choices: ['All', 'Undergraduate', 'Graduate', 'Sports Council']
+    choices: ['All', 'Undergraduate', 'Graduate', 'Sports Council', 'None']
   },
 ];
 

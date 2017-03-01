@@ -279,12 +279,6 @@
 .isFocused .mdl-textfield__input {
   outline: none; }
 
-.isFocused .mdl-textfield__label {
-  color: #3f51b5;
-  font-size: 12px;
-  top: 4px;
-  visibility: visible; }
-
 .isFocused .mdl-textfield__label:after {
   left: 0;
   visibility: visible;
@@ -318,6 +312,12 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   visibility: hidden;
   width: 10px; }
+
+.mdl-textfield__label {
+  color: #3f51b5;
+  font-size: 12px;
+  top: 4px;
+  visibility: visible; }
 
 /*****************************************************************************/
 /* Dropdown: Style */
@@ -450,7 +450,7 @@
   background-color: #eeeeee; }
 
 .song-row:hover .row-cell .column-content .bold {
-  font-weight: 500; }
+  font-weight: 600; }
 
 .column-content {
   display: block;
