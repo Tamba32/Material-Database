@@ -1,14 +1,13 @@
 import React from 'react';
 
-class Header extends React.Component {
-  render() {
-    return (
+import Groups from './groups/Groups.jsx';
+
+const NewPage = () => {
+  return (
+    <div id="new-page">
       <header className="mdl-layout__header">
         <span className="mdl-layout-title">Groups</span>
         <div className="mdl-layout-spacer"></div>
-        <div className="search-bar">
-          
-        </div>
         <nav className="mdl-navigation">
           <div className="mdl-navigation__link" href="">Home</div>
           <div className="mdl-navigation__link" href="">FYSM</div>
@@ -16,8 +15,13 @@ class Header extends React.Component {
           <div className="mdl-navigation__link" href="">Help</div>
         </nav>
       </header>
-    );
-  }
-}
+      <div className="jumbotron-container">
+        <div className="jumbotron">
+          <Groups/>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Header;
+export default NewPage;

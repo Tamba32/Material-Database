@@ -3,30 +3,10 @@ import React from 'react';
 import Buttons from './../../../components/buttons/Buttons.jsx';
 import OldTable from './../../../components/tables/old-table/OldTable.jsx';
 import MaterialTable from './../../../components/tables/material-table/MaterialTable.jsx';
-import Card from './../../../components/card/Card.jsx';
 import Form from './../../../components/form/Form.jsx';
 
 import { GROUPS } from './../../../js/groups.js';
 import { GROUP_PROPERTIES } from './../../../js/group-properties.js';
-
-const PROPS = { 
-  id: 2276,
-  name: "Lean On Me @ MIT",
-  abbreviation: 'LOM',
-  category: 'Social',
-  groupStatus: 'Active',
-  groupClass: 'Unfunded',
-  groupFunding: 'undergraduate',
-  website: 'http://lean0n.me/',
-  desc: 'The purpose of the Lean On Me @ MIT Student Group is to facilitate communication among peer populations within MIT by way of technology-enabled, volunteer-based support networks, in order to enhance general well-being of the MIT community, particularly students. We envision a world in which everybody has someone to lean on, so we build a pervasive environment of open conversation and peer support. We strive to operate effectively and efficiently to accomplish this mission and to teach ourselves and others effective and sustainable group practices. We hold each other and the MIT community accountable to these ends, and we empower all students to participate in creating our vision and achieving our mission.',
-  time: null,
-  size: {
-    undergraduate: 30,
-    graduate: 3,
-    mitCommunity: 5,
-    other:  5
-  }
-};
 
 class GroupsPage extends React.Component {
 
@@ -122,17 +102,14 @@ class GroupsPage extends React.Component {
 
   render() {
     return (
-      <div className="group-list-page">
+      <div>
         <Form {...this.filterProps}/>
         <MaterialTable 
-          // style="material" 
           groups={this.groups}
           searchState={this.state.search}
-          // abbrevSearch = {this.state.search.abbreviation}
           groupsSort={this.state.groupsSort}
           changeSort={this.handleSort}
           buttonsState={this.state.filters} />
-        <Card group={PROPS}/>
       </div>
     );
   }

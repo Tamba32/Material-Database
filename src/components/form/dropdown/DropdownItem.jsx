@@ -15,7 +15,7 @@ class DropdownItem extends React.Component {
   
   render() {
     return (
-      <li onClick={this.handleClick}>
+      <li className="dropdown-item" onClick={this.handleClick}>
         {this.props.item}
       </li>
     );

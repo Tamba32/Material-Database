@@ -11,14 +11,28 @@ class TableBody extends React.Component {
     super();
     
     this.state = {
-      open: ''
+      isOpened: ''
     };
+    
     this.filter = this.filter.bind(this);
     this.handleOpenClick = this.handleOpenClick.bind(this);
+    this.handleCloseClick = this.handleCloseClick.bind(this);
+    this.toggleClick = this.toggleClick.bind(this);
   }
   
-  handleOpenClick(open) {
-    this.setState({open});
+  toggleClick(row) {
+    this.state.isOpened === row ? 
+    this.handleCloseClick() :
+    this.handleOpenClick(row) ;
+    // this.handleCloseClick();
+  }
+  
+  handleOpenClick(isOpened) {
+    this.setState({isOpened});
+  }
+  
+  handleCloseClick() {
+    this.setState({isOpened: ''});
   }
   
   filter(group) {
@@ -43,14 +57,14 @@ class TableBody extends React.Component {
     return groups.map((group, i) => (
       <ReactCSSTransitionReplace
         key={i}
-        transitionName="cross-fade" 
+        transitionName="table-transition" 
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}>
         {(_.where(filteredGroups, {...group})).length ?
-          <TableRow key={group.id} group={group} 
-            // style={this.props.style} 
-            handleOpenClick={this.handleOpenClick} 
-            isOpen={group.name === this.state.open}/> : null
+          <TableRow key={group.id} group={group}
+            toggleClick={this.toggleClick} 
+            isOpened={group.name === this.state.isOpened}/> :
+          null
         }
       </ReactCSSTransitionReplace>
     ));
@@ -58,8 +72,9 @@ class TableBody extends React.Component {
   
   render() {
     return (
-      <div className="body">
+      <div>
         {this.rows}
+        {this.dbEntry}
       </div>
     );
   }

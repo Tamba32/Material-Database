@@ -19,12 +19,12 @@ class DropdownList extends React.Component {
     return (
       <ReactCSSTransitionReplace
         key={0}
-        transitionName="cross-fade2" 
+        transitionName="dropdown-transition" 
         transitionEnterTimeout={280}
         transitionLeaveTimeout={280}>
         {this.props.isOpened ?
-          <div className="mf-select-dropdown-menu">
-            <ul>
+          <div className="dropdown-menu">
+            <ul className="dropdown-list">
               {this.items}
             </ul>
           </div> :
@@ -73,9 +73,9 @@ class DropdownListContainer extends React.Component {
   
   render() {
     return (
-      <div className="mui-textfield">
-        <label>{this.props.label}</label>
-        <div className="input" onClick={this.handleClick}>
+      <div className={`textfield${this.state.isOpened ? ' isFocused' : ''}`}>
+        <label className="textfield-label">{this.props.label}</label>
+        <div className="textfield-input" onClick={this.handleClick}>
           {this.props.filterState}
         </div>
           <DropdownList choices={this.props.choices}

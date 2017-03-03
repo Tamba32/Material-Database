@@ -14,7 +14,6 @@ class IconButton extends React.Component {
   
   onMouseEnterHandler() {
     this.setState({hover: true});
-    console.log('we')
   }
   
   onMouseLeaveHandler() {
@@ -24,11 +23,9 @@ class IconButton extends React.Component {
   get tooltip() {
     const und = this.props.website === undefined;
     return (
-      // this.state.hover ? 
-      <div className={`mdl-tooltip${this.state.hover ? ' is-active' : ''}`}>
+      <div className={`tooltip${this.state.hover ? ' is-active' : ''}`}>
         {und ? 'DB Entry' : 'Website'}
       </div> 
-      // : null
     );
   }
   
@@ -46,7 +43,7 @@ class IconButton extends React.Component {
       </a>
     );
     return (
-      <div className="paper-icon-button-0" disabled={und ? false : !website}
+      <div className="icon-button" disabled={und ? false : !website}
         onMouseEnter={this.onMouseEnterHandler}
         onMouseLeave={this.onMouseLeaveHandler}>
         {inside}

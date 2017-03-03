@@ -8,9 +8,7 @@ class Button extends React.Component {
   }
   
   handleClick() {
-    const { button, groupId, setButtonGroupState } = this.props;
-    if (!groupId) setButtonGroupState(button);
-    else setButtonGroupState(groupId, button);
+    this.props.setButtonGroupState(this.props.button);
   }
   
   get active() {
@@ -18,19 +16,11 @@ class Button extends React.Component {
   }
   
   render() {
-    if (this.props.buttonsType === 'div') {
-      return (
-        <div onClick={this.handleClick} className={"button" + this.active}>
-          {this.props.button}
-        </div>
-      );
-    } else {
-      return (
-        <li onClick={this.handleClick} className={this.active}>
-          <a>{this.props.button}</a>
-        </li>
-      );
-    }
+    return (
+      <li onClick={this.handleClick} className={this.active}>
+        <a>{this.props.button}</a>
+      </li>
+    );
   }
 }
 

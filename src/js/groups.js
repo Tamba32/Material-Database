@@ -332,7 +332,7 @@ const GROUPS = [
     groupClass: 'Sponsored',
     groupFunding: 'None',
     website: null,
-    desc: null,
+    desc: "The Ring Committee designs its class year's Brass Rat ring.",
     meetingTime: null,
     size: {
       undergraduate: 13,

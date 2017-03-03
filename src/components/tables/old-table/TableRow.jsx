@@ -3,8 +3,7 @@ import React from 'react';
 class TableRow extends React.Component {
   
   get rowClassName() {
-    if (this.props.style === "material") return;
-    switch(this.props.row.status) {
+    switch(this.props.row.groupStatus) {
       case 'Active':
         return 'group-status-active group-active-True';
       case 'Derecognized':
@@ -18,24 +17,16 @@ class TableRow extends React.Component {
     }
   }
   
-  get statusClassName() {
-    return this.props.style === 'old' ? 'group-status' : null;
-  }
-  
-  get cellClassName() {
-    return this.props.style === 'old' ? 'table-header' : null;
-  }
-  
   render() {
     return (
       <tr className={this.rowClassName}>
-        <td className={this.cellClassName}>{this.props.row.name}</td>
-        <td className={this.cellClassName}>{this.props.row.nickname}</td>
-        <td className={this.statusClassName}>{this.props.row.status}</td>
+        <td className="table-header">{this.props.row.name}</td>
+        <td className="table-header">{this.props.row.abbreviation}</td>
+        <td className="group-status">{this.props.row.groupStatus}</td>
         <td><a href={this.props.row.website}>Website</a></td>
         <td><a href={this.props.row.db}>DB</a></td>
         <td>{this.props.row.desc}</td>
-        <td>{this.props.row.time}</td>
+        <td>{this.props.row.meetingTime}</td>
       </tr>
     );
   }

@@ -2,8 +2,6 @@ import React from 'react';
 
 import TableRow from './TableRow.jsx';
 
-// import { GROUPS } from './../../../groups.js';
-
 class TableBody extends React.Component {
   
   get rows() {

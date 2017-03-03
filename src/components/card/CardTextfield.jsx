@@ -8,23 +8,21 @@ class CardTextfield extends React.Component {
                     .replace(/^./, str => (str.toUpperCase()));
   }
   
-  get icon() {
-    const { type } = this.props;
-    if (!type) return;
-    return (
-      <div className="paper-icon-button-0">
-        <i className={`icon ion-ios-${type === 'website' ? 'world' : 'clock'}-outline`}></i>
-      </div>
-    );
-  }
-  
   render() {
+    const { website } = this.props;
+    const und = (website === undefined || website === null);
+    let inside;
+    if (und) inside = this.props.value || 'None';
+    else {inside = (
+      <a target="_blank" href={website}>
+        {website}
+      </a>
+    )}
     return (
-      <div className="mui-textfield">
-        <label>{this.label}</label>
-        <div className="input">
-          {this.icon}
-          {this.props.value}
+      <div className="textfield" style={website ? {maxWidth: "50%", overflowWrap: 'break-word'} : {}}>
+        <label className="textfield-label">{this.label}</label>
+        <div className="textfield-input">
+          {inside}
         </div>
       </div>
     );

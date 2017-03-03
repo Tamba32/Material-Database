@@ -8,7 +8,7 @@ const Card = props => {
   const sizeKeys = Object.keys(group.size);
   return (
     <div className="card">
-      <div className="legend-title">Basic Information</div>
+      <div className="title">Basic Information</div>
         <div className="row">
           <div className="column column-one-third">
             <CardTextfield label={keys[1]} value={group[keys[1]]}/>
@@ -19,13 +19,13 @@ const Card = props => {
             <CardTextfield label={keys[3]} value={group[keys[3]]}/>
           </div>
           <div className="column column-two-thirds">
-            <div className="mui-textfield">
-              <label>Description</label>
-              <div className="textarea">{group[keys[8]]}</div>
+            <div className="textfield">
+              <label className="textfield-label">Description</label>
+              <div className="textfield-textbox">{group[keys[8]]}</div>
             </div>
           </div>
         </div>
-      <div className="legend-title">Recognition</div>
+      <div className="title">Recognition</div>
       <div className="row">
         {[4,5,6].map(num => (
           <CardTextfield key={num} label={keys[num]} value={group[keys[num]]}/>
@@ -33,30 +33,36 @@ const Card = props => {
       </div>
       <div className="row">
         <div className="column column-one-half">
-          <div className="legend-title">Contact</div>
+          <div className="title">Contact</div>
           <div className="row">
-            <CardTextfield label={keys[7]} value={group[keys[7]]} type="website"/>
-            <CardTextfield label={keys[9]} value={group[keys[9]] || 'No Time Provided'} type="time"/>
+            <CardTextfield label={keys[7]} value={group[keys[7]]} website={group[keys[7]]}/>
+            <CardTextfield label={keys[9]} value={group[keys[9]] || 'No Time Provided'}/>
           </div>
         </div>
         <div className="column column-one-half">
-          <div className="legend-title">Member Makeup</div>
-          <div className="material-album">
-            <div className="song-table tight" data-type="album">
-              <div className="header-row">
+          <div className="title">Member Makeup</div>
+          <div className="group-table">
+            <div className="header-row">
+              {[0,1,2,3].map(num => {
+                let cell;
+                if (sizeKeys[num] === 'mitCommunity') cell = 'MIT Community' ;
+                else cell = sizeKeys[num]
+                                        .replace(/([A-Z])/g, ' $1')
+                                        .replace(/^./, str => (str.toUpperCase()));
+                return (
+                  <div key={num} className="header-cell">
+                    {cell}
+                  </div>
+                );
+              })}
+            </div>
+            <div>
+              <div className="body-row">
                 {[0,1,2,3].map(num => (
-                  <div className="header-cell">{sizeKeys[num]
-                                      .replace(/([A-Z])/g, ' $1')
-                                      .replace(/^./, str => (str.toUpperCase()))
-                  }</div>
+                  <div key={num} className="row-cell">
+                    {group.size[sizeKeys[num]]}
+                  </div>
                 ))}
-              </div>
-              <div className="body">
-                <div className="song-row">
-                  {[0,1,2,3].map(num => (
-                    <div className="row-cell">{group.size[sizeKeys[num]]}</div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

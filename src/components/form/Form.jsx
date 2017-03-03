@@ -32,13 +32,16 @@ class Form extends React.Component {
   
   render() {
     return (
-      <div className="card" style={{height: '300px'}}>
-        <div className="row">
-          {this.searchInputs}
-        </div>
-        <div className="row">
-          {this.dropdownFilters}
-        </div>
+      <div id="filter-card">
+        <div id="search-title">Search</div>
+        <form>
+          <div className="row">
+            {this.searchInputs}
+          </div>
+          <div className="row">
+            {this.dropdownFilters}
+          </div>
+        </form>
       </div>
     );
   }

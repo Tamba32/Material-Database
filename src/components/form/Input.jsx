@@ -26,12 +26,12 @@ class Input extends React.Component {
   render() {
     const {value, type, focused } = this.props;
     return (
-      <div className={`mdl-textfield ${focused || value ? 'isFocused' : ''}`}>
-        <label className="mdl-textfield__label">
+      <div className={`textfield ${focused || value ? 'isFocused' : ''}`}>
+        <label className="textfield-label">
           {type === 'name' ? 'Name Contains' : 'Abbreviation Contains'}
         </label>
         <input type="text" 
-          className="mdl-textfield__input"
+          className="textfield-input"
           value={value} 
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
