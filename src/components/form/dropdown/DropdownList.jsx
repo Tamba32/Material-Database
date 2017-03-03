@@ -2,7 +2,6 @@ import React from 'react';
 
 import DropdownItem from './DropdownItem.jsx';
 import ReactCSSTransitionReplace from 'react-css-transition-replace';
-import enhanceWithClickOutside from 'react-click-outside';
 
 class DropdownList extends React.Component {
   
@@ -18,12 +17,11 @@ class DropdownList extends React.Component {
   render() {
     return (
       <ReactCSSTransitionReplace
-        key={0}
         transitionName="dropdown-transition" 
         transitionEnterTimeout={280}
         transitionLeaveTimeout={280}>
         {this.props.isOpened ?
-          <div className="dropdown-menu">
+          <div key={0} className="dropdown-menu">
             <ul className="dropdown-list">
               {this.items}
             </ul>
@@ -35,56 +33,4 @@ class DropdownList extends React.Component {
   }
 }
 
-
-class DropdownListContainer extends React.Component {
-  
-  constructor() {
-    super();
-    
-    this.state = {
-      isOpened: false
-    };
-    
-    this.setFilterState = this.setFilterState.bind(this);
-    this.toggleDropdownState = this.toggleDropdownState.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleCloseClick = this.handleCloseClick.bind(this);
-  }
-  
-  setFilterState(el) {
-    this.props.setFilterState(this.props.id, el);
-  }
-  
-  toggleDropdownState() {
-    this.setState({isOpened: this.state.isOpened ? false : true});
-  }
-  
-  handleClick() {
-    this.toggleDropdownState();
-  }
-  
-  handleCloseClick() {
-    this.setState({isOpened: false});
-  }
-  
-  handleClickOutside() {
-    this.setState({isOpened: false});
-  }
-  
-  render() {
-    return (
-      <div className={`textfield${this.state.isOpened ? ' isFocused' : ''}`}>
-        <label className="textfield-label">{this.props.label}</label>
-        <div className="textfield-input" onClick={this.handleClick}>
-          {this.props.filterState}
-        </div>
-          <DropdownList choices={this.props.choices}
-          handleCloseClick={this.handleCloseClick}
-          isOpened={this.state.isOpened}
-          setFilterState={this.setFilterState}/>
-      </div>
-    );
-  }
-}
-
-export default enhanceWithClickOutside(DropdownListContainer);
+export default DropdownList;

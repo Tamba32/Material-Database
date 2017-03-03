@@ -2,10 +2,10 @@ import React from 'react';
 import ReactCSSTransitionReplace from 'react-css-transition-replace';
 import _ from 'underscore';
 
-import TableRow from './TableRow.jsx';
+import MaterialTableRow from './MaterialTableRow.jsx';
 // import { GROUPS } from './../../../groups.js';
 
-class TableBody extends React.Component {
+class MaterialTableBody extends React.Component {
   
   constructor() {
     super();
@@ -61,7 +61,7 @@ class TableBody extends React.Component {
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}>
         {(_.where(filteredGroups, {...group})).length ?
-          <TableRow key={group.id} group={group}
+          <MaterialTableRow key={group.id} group={group}
             toggleClick={this.toggleClick} 
             isOpened={group.name === this.state.isOpened}/> :
           null
@@ -80,4 +80,4 @@ class TableBody extends React.Component {
   }
 }
 
-export default TableBody;
+export default MaterialTableBody;

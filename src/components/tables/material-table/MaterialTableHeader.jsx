@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TableHeader extends React.Component {
+class MaterialTableHeader extends React.Component {
   
   constructor() {
     super();
@@ -26,4 +26,4 @@ class TableHeader extends React.Component {
   }
 }
 
-export default TableHeader;
+export default MaterialTableHeader;

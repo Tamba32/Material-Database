@@ -38,6 +38,11 @@ class GroupsPage extends React.Component {
     this.handleFocus = this.handleFocus.bind(this);
   }
   
+  componentDidUpdate() {
+    console.log(this.state.search);
+    console.log(this.state.filters);
+  }
+  
   handleSort() {
     this.setState(
       {groupsSort: this.state.groupsSort === 'front' ? 'reverse' : 'front'}
@@ -60,6 +65,15 @@ class GroupsPage extends React.Component {
     this.setState({search: {...this.state.search, abbreviation: e.target.value}});
   }
   
+  setFilterState(groupId, value) {
+    this.setState({
+      filters: {
+        ...this.state.filters, 
+        [groupId]: value
+      }
+    });
+  }
+  
   get buttonGroups() {
     return GROUP_PROPERTIES.map((group, i) => (
       <Buttons key={i} buttons={group.choices} groupId={group.id}  
@@ -78,7 +92,8 @@ class GroupsPage extends React.Component {
       handleFocus: this.handleFocus,
       handleBlur: this.handleBlur,
       changeNameSearch: this.handleNameChange,
-      changeAbbrevSearch: this.handleAbbrevChange
+      changeAbbrevSearch: this.handleAbbrevChange,
+      type: this.props.type
     };
   }
   
@@ -90,26 +105,31 @@ class GroupsPage extends React.Component {
       return 0;  
     });
   }
-  
-  setFilterState(groupId, filter) {
-    this.setState({
-      filters: {
-        ...this.state.filters, 
-        [groupId]: filter
-      }
-    });
-  }
 
+  get tableProps() {
+    return {
+      groups: this.groups,
+      searchState: this.state.search,
+      groupsSort: this.state.groupsSort,
+      changeSort: this.handleSort,
+      buttonsState: this.state.filters
+    };
+  }
+  
   render() {
     return (
       <div>
         <Form {...this.filterProps}/>
-        <MaterialTable 
-          groups={this.groups}
-          searchState={this.state.search}
-          groupsSort={this.state.groupsSort}
-          changeSort={this.handleSort}
-          buttonsState={this.state.filters} />
+        {this.props.type === "old" ? 
+          <span>
+            <h2>The Groups</h2>
+            <p>{`Found ${GROUPS.length} groups:`}</p>
+          </span> :
+          null
+        }
+        {this.props.type === "new" ? 
+          <MaterialTable {...this.tableProps}/> :
+          <OldTable {...this.tableProps}/>}
       </div>
     );
   }

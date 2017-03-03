@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TableHeader extends React.Component {
+class OldTableHeader extends React.Component {
   
   get headerContent() {
     return [
@@ -26,4 +26,4 @@ class TableHeader extends React.Component {
   }
 }
 
-export default TableHeader;
+export default OldTableHeader;

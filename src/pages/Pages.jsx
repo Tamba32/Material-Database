@@ -8,8 +8,9 @@ class Pages extends React.Component {
   render() {
     return (
       <div id="pages">
-        <OldPage/>
+        
         <NewPage/>
+        <OldPage/>
       </div>
     );
   }

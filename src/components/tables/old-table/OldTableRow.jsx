@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TableRow extends React.Component {
+class OldTableRow extends React.Component {
   
   get rowClassName() {
     switch(this.props.row.groupStatus) {
@@ -32,4 +32,4 @@ class TableRow extends React.Component {
   }
 }
 
-export default TableRow;
+export default OldTableRow;

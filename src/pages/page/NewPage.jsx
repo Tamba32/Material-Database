@@ -17,7 +17,7 @@ const NewPage = () => {
       </header>
       <div className="jumbotron-container">
         <div className="jumbotron">
-          <Groups/>
+          <Groups type="new"/>
         </div>
       </div>
     </div>

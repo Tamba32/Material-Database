@@ -1,21 +1,24 @@
 import React from 'react';
 
-import { GROUPS } from './../../../js/groups.js';
+// import { GROUPS } from './../../../js/groups.js';
 
-import TableHeader from './TableHeader.jsx';
-import TableBody from './TableBody.jsx';
+import OldTableHeader from './OldTableHeader.jsx';
+import OldTableBody from './OldTableBody.jsx';
 
-class Table extends React.Component {
+class OldTable extends React.Component {
   render() {
     return (
       <div>
         <table className="pretty-table group-list">
-          <TableHeader style={this.props.style}/>
-          <TableBody groups={GROUPS} style={this.props.style}/>
+          <OldTableHeader/>
+          <OldTableBody groups={this.props.groups}
+            searchState={this.props.searchState}
+            buttonsState={this.props.buttonsState} 
+          />
         </table>
       </div>
     );
   }
 }
 
-export default Table;
+export default OldTable;

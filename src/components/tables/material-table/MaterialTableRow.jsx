@@ -4,7 +4,7 @@ import ReactCSSTransitionReplace from 'react-css-transition-replace';
 import IconButton from './IconButton.jsx';
 import Card from './../../card/Card.jsx';
 
-class TableRow extends React.Component {
+class MaterialTableRow extends React.Component {
   
   constructor() {
     super();
@@ -61,7 +61,7 @@ class TableRow extends React.Component {
   render() {
     const {name, groupStatus, desc } = this.props.group;
     return (
-      <span>
+      <div>
         <div className={"body-row" + (this.props.isOpened ? ' active' : '')}
           onClick={this.handleClick}
           onMouseEnter={this.onMouseEnterHandler}
@@ -77,9 +77,9 @@ class TableRow extends React.Component {
           <div className="row-cell" data-col="details">{desc}</div>
         </div>
         {this.dbEntry}
-      </span>  
+      </div>  
     );
   }
 }
 
-export default TableRow;
+export default MaterialTableRow;
