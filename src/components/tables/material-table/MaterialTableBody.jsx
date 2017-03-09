@@ -3,7 +3,6 @@ import ReactCSSTransitionReplace from 'react-css-transition-replace';
 import _ from 'underscore';
 
 import MaterialTableRow from './MaterialTableRow.jsx';
-// import { GROUPS } from './../../../groups.js';
 
 class MaterialTableBody extends React.Component {
   
@@ -24,7 +23,6 @@ class MaterialTableBody extends React.Component {
     this.state.isOpened === row ? 
     this.handleCloseClick() :
     this.handleOpenClick(row) ;
-    // this.handleCloseClick();
   }
   
   handleOpenClick(isOpened) {

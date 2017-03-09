@@ -1,10 +1,6 @@
-*, *:after, *:before {
-  box-sizing: border-box;}
-
 #old-page {
   padding: 1em;
   background: #BE2933;
-  
   #content {
     margin: 0;
     margin-top: 5px;
@@ -24,7 +20,7 @@
       text-align: right;
       line-height: 100%;
       p {margin: 0.2em;}
-      a{color: white;}}}
+      a {color: white;}}}
     
   ul.tab-navigation {
     margin-left: 0;
@@ -38,8 +34,8 @@
       background: white;
       list-style: none;
       display: inline;
-      border-top-left-radius: 15px;
-      &.active {
+      border-radius: 15px 15px 0 0;
+      &:nth-child(2) {
         background: #333;
         color: white;
         position: relative;

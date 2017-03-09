@@ -8,18 +8,18 @@ class Button extends React.Component {
   }
   
   handleClick() {
-    this.props.setButtonGroupState(this.props.button);
+    this.props.setButtonState(this.props.button);
   }
   
   get active() {
-    return (this.props.buttonGroupState === this.props.button ? ' active' : '');
+    return (this.props.buttonState === this.props.button ? ' active' : '');
   }
   
   render() {
     return (
-      <li onClick={this.handleClick} className={this.active}>
-        <a>{this.props.button}</a>
-      </li>
+      <div onClick={this.handleClick} className={"button" + this.active}>
+        {this.props.button}
+      </div>
     );
   }
 }

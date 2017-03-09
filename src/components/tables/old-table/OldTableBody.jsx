@@ -8,7 +8,6 @@ class OldTableBody extends React.Component {
   filter(group) {
     const buttons = this.props.buttonsState;
     const searches = this.props.searchState;
-    console.log(this.props)
     const filterTests = Object.keys(buttons).map(category => (
       (group[category] === buttons[category]) || (buttons[category] === 'All')));
     const searchTests = Object.keys(searches).map(search => {

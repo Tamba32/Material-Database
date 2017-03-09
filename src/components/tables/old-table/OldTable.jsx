@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import { GROUPS } from './../../../js/groups.js';
-
 import OldTableHeader from './OldTableHeader.jsx';
 import OldTableBody from './OldTableBody.jsx';
 

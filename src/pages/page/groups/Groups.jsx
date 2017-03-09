@@ -38,11 +38,6 @@ class GroupsPage extends React.Component {
     this.handleFocus = this.handleFocus.bind(this);
   }
   
-  componentDidUpdate() {
-    console.log(this.state.search);
-    console.log(this.state.filters);
-  }
-  
   handleSort() {
     this.setState(
       {groupsSort: this.state.groupsSort === 'front' ? 'reverse' : 'front'}
@@ -82,6 +77,15 @@ class GroupsPage extends React.Component {
     ));
   }
   
+  get groups() {
+    const state = this.state.groupsSort === 'front';
+    return GROUPS.sort((a,b) => {
+      if (a.name < b.name) return state ? -1 : 1;
+      if (a.name > b.name) return state ? 1 : -1;
+      return 0;  
+    });
+  }
+  
   get filterProps() {
     return {
       filterStates: this.state.filters,
@@ -97,15 +101,6 @@ class GroupsPage extends React.Component {
     };
   }
   
-  get groups() {
-    const state = this.state.groupsSort === 'front';
-    return GROUPS.sort((a,b) => {
-      if (a.name < b.name) return state ? -1 : 1;
-      if (a.name > b.name) return state ? 1 : -1;
-      return 0;  
-    });
-  }
-
   get tableProps() {
     return {
       groups: this.groups,

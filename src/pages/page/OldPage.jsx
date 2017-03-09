@@ -6,28 +6,19 @@ import Groups from './groups/Groups.jsx';
 class OldPage extends React.Component {
   
   get tabs() {
-    return ['home', 'groups', 'fysm', 'midway', 'help'];
-  }
-  
-  constructor() {
-    super();
-    this.state = {
-      page: 'groups',
-    };
-    
-    this.setPage = this.setPage.bind(this);
-  }
-  
-  setPage(page) {
-    this.setState({page});
+    return ['Home', 'Groups', 'FYSM', 'Midway', 'Help'];
   }
   
   render() {
     return (
       <div id="old-page">
-        <Buttons buttonGroupState={this.state.page}
-          setButtonGroupState={this.setPage} buttons={this.tabs}
-        />
+        <ul className="tab-navigation">
+          {this.tabs.map((tab, i) => (
+            <li key={i}>
+              <a href="">{tab}</a>
+            </li>
+          ))}
+        </ul>
         <div id="content">
           <div className="curuser">
             <div className="spacer"></div>

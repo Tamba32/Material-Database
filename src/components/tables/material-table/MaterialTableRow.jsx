@@ -41,7 +41,7 @@ class MaterialTableRow extends React.Component {
   
   get nickname() {
     if (!this.state.hover || !this.props.group.abbreviation) return;
-    return this.props.group.abbreviation;
+    return " (" + this.props.group.abbreviation + ")";
   }
   
   get dbEntry() {
