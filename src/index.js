@@ -5,5 +5,5 @@ import './css/reset.css';
 
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
+  document.getElementById('root2')
 );

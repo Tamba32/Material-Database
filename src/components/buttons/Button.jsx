@@ -16,9 +16,11 @@ class Button extends React.Component {
   }
   
   render() {
+    const { button, width } = this.props;
     return (
-      <div onClick={this.handleClick} className={"button" + this.active}>
-        {this.props.button}
+      <div onClick={this.handleClick} className={"tab" + this.active} 
+        style={{width: width + "%"}}>
+        {button}
       </div>
     );
   }

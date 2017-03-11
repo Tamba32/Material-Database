@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Buttons from './../../components/buttons/Buttons.jsx';
 import Groups from './groups/Groups.jsx';
 
 class OldPage extends React.Component {

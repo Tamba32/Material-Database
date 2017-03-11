@@ -19,7 +19,7 @@ class GroupsPage extends React.Component {
         groupStatus: 'All',
         groupFunding: 'All',
       },
-      groupsSort: 'front',
+      groupsSort: 'forward',
       search: {
         name: '',
         abbreviation: ''
@@ -40,7 +40,7 @@ class GroupsPage extends React.Component {
   
   handleSort() {
     this.setState(
-      {groupsSort: this.state.groupsSort === 'front' ? 'reverse' : 'front'}
+      {groupsSort: this.state.groupsSort === 'forward' ? 'reverse' : 'forward'}
     );
   }
   
@@ -78,7 +78,7 @@ class GroupsPage extends React.Component {
   }
   
   get groups() {
-    const state = this.state.groupsSort === 'front';
+    const state = this.state.groupsSort === 'forward';
     return GROUPS.sort((a,b) => {
       if (a.name < b.name) return state ? -1 : 1;
       if (a.name > b.name) return state ? 1 : -1;

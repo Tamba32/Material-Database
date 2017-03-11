@@ -30,6 +30,7 @@ class Form extends React.Component {
     if (this.props.type === "new") {
       return (
         <form>
+          <h2 className="header-div">Search</h2>
           <div className="row">
             {this.searchInputs}
           </div>

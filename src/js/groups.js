@@ -703,7 +703,7 @@ const GROUPS = [
   },
   { 
     id: 2026,
-    name: 'Sakata Afrique (MIT African Dance Group)',
+    name: 'Sakata Afrique, MIT African Dance Group',
     abbreviation: 'Sakata',
     category: 'Cultural',
     groupStatus: 'Active',
