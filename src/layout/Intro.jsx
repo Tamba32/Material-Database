@@ -38,16 +38,17 @@ class Intro extends React.Component {
         <p><b>tl;dr Scroll down and see what I created below.</b></p>
         <p>
           One idea I had for a small project was to redesign the student groups
-          page of my school’s Association of Student Activities website. The 
-          group page of the website serves to provide information about the
+          page of my school’s &nbsp;
+          <a href="https://asa.mit.edu/groups/">Association of Student Activities website</a>
+          . The group page of the website serves to provide information about the
           hundreds of student groups on campus, info like name, status, 
           description, and meeting times.
         </p>
         <p>
-          As you can see by either down below or clicking here, the website is
-          very bland and outdated.  As an officer of one of the student groups,
-          I would visit this page a couple of times a semester and each time 
-          be turned off by the poor design and styling.
+          As you can see by either down below or the link above, the website is 
+          very bland and outdated.  As an officer of one of the
+          student groups, I would visit this page a couple of times a semester 
+          and each time be turned off by the poor design and styling.
         </p>
         <p>
           I knew I could develop a much better designed page and so , I 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Groups from './groups/Groups.jsx';
+import Groups from './../../layout/Groups.jsx';
 
 class OldPage extends React.Component {
   

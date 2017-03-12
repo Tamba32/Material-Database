@@ -73,7 +73,7 @@ class MaterialTableRow extends React.Component {
               <span className="grey">{this.nickname}</span>
             </span>
           </div>
-          <div className="row-cell" data-col="status">{groupStatus.charAt(0)}</div>
+          <div className="row-cell" data-col="status">{groupStatus}</div>
           <div className="row-cell" data-col="details">{desc}</div>
         </div>
         {this.dbEntry}

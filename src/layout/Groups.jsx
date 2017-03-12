@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Buttons from './../../../components/buttons/Buttons.jsx';
-import OldTable from './../../../components/tables/old-table/OldTable.jsx';
-import MaterialTable from './../../../components/tables/material-table/MaterialTable.jsx';
-import Form from './../../../components/form/Form.jsx';
+import Buttons from './../components/buttons/Buttons.jsx';
+import OldTable from './../components/tables/old-table/OldTable.jsx';
+import MaterialTable from './../components/tables/material-table/MaterialTable.jsx';
+import Form from './../components/form/Form.jsx';
 
-import { GROUPS } from './../../../js/groups.js';
-import { GROUP_PROPERTIES } from './../../../js/group-properties.js';
+import { GROUPS } from './../js/groups.js';
+import { GROUP_PROPERTIES } from './../js/group-properties.js';
 
 class GroupsPage extends React.Component {
 

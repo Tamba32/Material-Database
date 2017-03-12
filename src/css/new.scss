@@ -68,7 +68,7 @@ h3 {
   margin: 0 50px 50px;}
 
 #intro {
-  padding: 50px 0;
+  padding: 50px 0 0;
   font-family: "Roboto", sans-serif;
   p {
     margin-top: 29px;
@@ -83,10 +83,14 @@ h3 {
     
 .intro-card {
   width: 740px;
-  margin: 0 auto 30px;}
+  margin: 0 auto 30px;
+  a, a:-webkit-any-link {
+    color: rgb(244, 67, 54);
+    text-decoration: unset;
+    cursor: auto;}}
 
 .intro-card-content {
-  margin: 40px 0;}
+  margin: 40px 0 30px;}
 
 #filter-card {
   height: 235px;
@@ -97,7 +101,7 @@ h3 {
   color: rgba(0,0,0,.87);}
 
 .jumbotron-container {
-  width: 80%;
+  width: 85%;
   margin: 100px auto;
   h2 {
     margin-left: 15px;}}
@@ -139,7 +143,8 @@ h3 {
   &.active {opacity: 1;}}
 
 .tabs {
-  width: 100%;
+  width: 740px;
+  margin: 25px auto 40px;
   position: relative;
   display: flex;}
 /*****************************************************************************/
@@ -305,7 +310,7 @@ h3 {
 /*****************************************************************************/
 /* Header: Style */
 /*****************************************************************************/
-.mdl-layout__header {
+.header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -319,17 +324,15 @@ h3 {
   color: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);}
   
-.mdl-layout-spacer {flex-grow: 1;}
+.header-spacer {flex-grow: 1;}
 
-.mdl-layout__header-row>* {flex-shrink: 0;}
-
-.mdl-navigation {
+.header-nav {
   height: 80px;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;}
   
-.mdl-navigation__link {
+.nav-link {
   color: #fff;
   line-height: 80px;
   padding: 0 17px;
@@ -340,7 +343,7 @@ h3 {
   &:last-child {
     padding-right: 40px;}}
   
-.mdl-layout-title {
+.header-title {
   position: relative;
   font-size: 22px;
   padding-left: 40px;
@@ -392,12 +395,12 @@ h3 {
   .table-transition-height {transition: height .5s ease-in-out;}
   
 .header-row, .body-row {
-  div[data-col="details"] {width: calc(67% - 50px);}
+  div[data-col="details"] {width: calc(67% - 90px);}
   div[data-col="status"] {
-    text-align: center;
-    width: 50px;}
+    // text-align: center;
+    width: 100px;}
   div[data-col="title"] {
-    width: 33%;}}
+    width: calc(33% - 10px);}}
 
 .header-cell {
   height: 36px;
@@ -435,8 +438,12 @@ h3 {
   a {text-decoration: none;}}
 
 .body-row .row-cell, .header-row div {
-  &:first-child {padding-left: 16px;}
-  &:last-child {padding-right: 16px;}}
+  &:first-child {
+    padding-left: 16px;
+    padding-right: 10px;}
+  &:last-child {
+    padding-left: 10px;
+    padding-right: 16px;}}
 
 .column-content {
   display: block;

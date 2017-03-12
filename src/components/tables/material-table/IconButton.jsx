@@ -9,7 +9,6 @@ class IconButton extends React.Component {
     };
     this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this);
     this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
   }
   
   onMouseEnterHandler() {

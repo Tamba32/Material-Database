@@ -1,18 +1,18 @@
 import React from 'react';
 
-import Groups from './groups/Groups.jsx';
+import Groups from './../../layout/Groups.jsx';
 
 const NewPage = () => {
   return (
     <div id="new-page">
-      <header className="mdl-layout__header">
-        <span className="mdl-layout-title">Groups</span>
-        <div className="mdl-layout-spacer"></div>
-        <nav className="mdl-navigation">
-          <div className="mdl-navigation__link" href="">Home</div>
-          <div className="mdl-navigation__link" href="">FYSM</div>
-          <div className="mdl-navigation__link" href="">Midway</div>
-          <div className="mdl-navigation__link" href="">Help</div>
+      <header className="header">
+        <span className="header-title">Groups</span>
+        <div className="header-spacer"></div>
+        <nav className="header-nav">
+          <div className="nav-link">Home</div>
+          <div className="nav-link">FYSM</div>
+          <div className="nav-link">Midway</div>
+          <div className="nav-link">Help</div>
         </nav>
       </header>
       <div className="jumbotron-container">
