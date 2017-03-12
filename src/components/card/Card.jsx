@@ -6,8 +6,6 @@ const Card = props => {
   const { group } = props;
   const keys = Object.keys(group);
   const sizeKeys = Object.keys(group.size);
-  console.log(keys[0]);
-  console.log(keys[0].toUpperCase());
   return (
     <div className="card">
       <div className="title">Basic Information</div>

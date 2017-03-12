@@ -35,13 +35,13 @@ class Intro extends React.Component {
   get backstory() {
     return (
       <div className="intro-card-content">
-        <p><b>tl;dr Scroll down and see what I created below.</b></p>
+        <p><b>tl;dr Scroll down and see what I created below :)</b></p>
         <p>
           One idea I had for a small project was to redesign the student groups
           page of my school’s &nbsp;
           <a href="https://asa.mit.edu/groups/">Association of Student Activities website</a>
-          . The group page of the website serves to provide information about the
-          hundreds of student groups on campus, info like name, status, 
+          . The group page of the website provides details about the
+          hundreds of student groups on campus, including name, status, 
           description, and meeting times.
         </p>
         <p>
@@ -51,25 +51,24 @@ class Intro extends React.Component {
           and each time be turned off by the poor design and styling.
         </p>
         <p>
-          I knew I could develop a much better designed page and so , I 
-          decided that a cool project for me to tackle would be updating the 
-          interface of the group page of the website.  I decided to use the 
-          Material Design style for the update. Although there are many 
+          I knew I could design something better so, as a small project, I
+          decided to do just that and update the group page.  I decided to use 
+          the Material Design style for the update. Although there are many 
           Material Design libraries out there (MUI, Material Design Light, 
           Materialize), I chose to forgo using any of them and instead write 
-          my own CSS and React components to control all the states, 
-          animations, and functionality myself.  
+          my own CSS and React components, giving myself control all the states, 
+          animations, and functionality.  
         </p>
         <p>
           View my work below.  The first tab, Old, is a remake of the current 
-          ASA group page.  I second tab, New, is my rendition of the website, 
+          ASA group page.  The second tab, New, is my rendition of the website, 
           the updated version.  The third tab, is a side by side comparison of
-          the two pages, with the zoom of half on each.
+          the two pages, with a zoom of half on each.
         </p>
         <p>
-          (Because this was just a small project/the ASA website is unlikely 
-          to be viewed on a mobile screen/I became lazy, I did not make the 
-          page responsive.)
+          (Because the ASA website is unlikely to be viewed on a mobile screen /
+          this was just a small project and I did not want to spend time making
+          it so, the web page design is not responsive.)
         </p>
         <p>
           You can check out the code for this project on Github here.

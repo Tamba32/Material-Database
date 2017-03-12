@@ -8,7 +8,7 @@ $material-blue: #3f51b5;
 $grey: #616161;
 
 #root2 {
-  padding: 50px 0;
+  padding: 60px 0;
   background-color: #fafafa;}
 
 #new-page {
@@ -69,7 +69,7 @@ h3 {
   margin: 0 50px 50px;}
 
 #intro {
-  padding: 50px 0 0;
+  padding: 60px 0 0;
   font-family: "Roboto", sans-serif;
   p {
     margin-top: 29px;
@@ -381,7 +381,7 @@ h3 {
   
 .body-row {
   height: 40px;
-  &:hover { background-color: #eeeeee;
+  &:hover, &.active { background-color: #eeeeee;
     .bold { font-weight: 600;}}}
   .table-transition-enter {
     opacity: 0;
@@ -397,11 +397,8 @@ h3 {
   
 .header-row, .body-row {
   div[data-col="details"] {width: calc(67% - 90px);}
-  div[data-col="status"] {
-    // text-align: center;
-    width: 100px;}
-  div[data-col="title"] {
-    width: calc(33% - 10px);}}
+  div[data-col="status"] {width: 100px;}
+  div[data-col="title"] {width: calc(33% - 10px);}}
 
 .header-cell {
   height: 36px;
@@ -483,17 +480,13 @@ h3 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);}
   .card-transition-enter {
     opacity: 0;
-    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.24), 0 0 50px 13px rgba(0, 0, 0, 0.19);
     &.card-transition-enter-active {
       opacity: 1;
-      box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.24), 0 0 50px 13px rgba(0, 0, 0, 0.19);
       transition: opacity .5s ease-in, box-shadow .5s ease-in;}}
   .card-transition-leave {
     opacity: 1;
-    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.24), 0 0 50px 13px rgba(0, 0, 0, 0.19);
     &.card-transition-leave-active {
       opacity: 0;
-      box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.24), 0 0 50px 13px rgba(0, 0, 0, 0.19);
       transition: opacity .5s ease-in, box-shadow .5s ease-in;}}}
   .card-transition-height {transition: height .5s ease-in-out;}
 /*****************************************************************************/

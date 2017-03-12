@@ -3,7 +3,7 @@ import React from 'react';
 class CardTextfield extends React.Component {
   
   get label() {
-    if (this.props.label === 'ID') return 'ID';
+    if (this.props.label === 'id') return 'ID';
     return this.props.label
                     .replace(/([A-Z])/g, ' $1')
                     .replace(/^./, str => (str.toUpperCase()));
