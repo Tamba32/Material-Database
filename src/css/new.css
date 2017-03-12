@@ -173,7 +173,7 @@ h3 {
   line-height: 30px;
   text-transform: uppercase;
   color: white;
-  background-color: #3F51B5;
+  background-color: #f44336;
   border: 0;
   padding-left: 15px; }
 
@@ -405,7 +405,7 @@ h3 {
   -webkit-user-select: none; }
 
 .header-row {
-  background: #f44336;
+  background: #3f51b5;
   line-height: 36px;
   height: 36px; }
 
@@ -514,7 +514,7 @@ h3 {
 
 .card .header-cell {
   height: 15px;
-  color: #f44336;
+  color: #3f51b5;
   text-transform: unset;
   font-weight: unset;
   width: 25%; }

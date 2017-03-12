@@ -12,7 +12,6 @@ class Buttons extends React.Component {
     const { buttons, buttonState } = this.props;
     const width = this.width;
     const active = buttons.indexOf(buttonState);
-    // console.log(active*width)
     return {left: active*width + "%", width: width + "%"};
   }
   
@@ -29,7 +28,7 @@ class Buttons extends React.Component {
       <div className="tabs">
         {this.buttons}
         <div className="slide" style={this.style}></div>
-      </div >
+      </div>
     );
   }
 }

@@ -1,9 +1,6 @@
 #old-page {
   padding: 1em;
   background: #BE2933;
-  /********
-  * FYSM *
-  ********/
   /*****************
   * GROUP DISPLAY *
   *****************/
@@ -84,6 +81,8 @@
       background: #BE2933; }
       #old-page .pretty-table .table-header a, #old-page .pretty-table th a, #old-page .pretty-table caption a {
         color: #008; }
+    #old-page .pretty-table .pretty-header-row {
+      width: 100%; }
     #old-page .pretty-table caption {
       border-bottom: none; }
   #old-page table.group-list tbody th {
@@ -118,79 +117,6 @@
       background: #f88; }
   #old-page span.username {
     font-family: "Courier", monospace; }
-  #old-page .single-fysm-entry h3, #old-page .fysm-summarystrip h3 {
-    margin: 0 0 5px 0;
-    padding: 2px 10px;
-    background: #BE2933; }
-  #old-page .single-fysm-entry h3 a, #old-page .fysm-navstrip a, #old-page .fysm-summarystrip a {
-    color: #fcfcfc;
-    text-decoration: none; }
-    #old-page .single-fysm-entry h3 a:hover, #old-page .fysm-navstrip a:hover, #old-page .fysm-summarystrip a:hover {
-      text-decoration: underline; }
-  #old-page .single-fysm-entry {
-    max-width: 600px;
-    clear: both;
-    border: 1px solid #666;
-    margin: 10px auto; }
-    #old-page .single-fysm-entry .logo, #old-page .single-fysm-entry .nologo {
-      float: left;
-      width: 100px;
-      background: #eee;
-      border: 2px solid black;
-      margin: 10px 20px 10px;
-      text-align: center; }
-    #old-page .single-fysm-entry .logo img {
-      max-width: 100px;
-      max-height: 100px; }
-    #old-page .single-fysm-entry .nologo {
-      height: 100px;
-      line-height: 90px; }
-    #old-page .single-fysm-entry .fysm-body {
-      margin-bottom: 10px; }
-    #old-page .single-fysm-entry .data {
-      text-align: justify;
-      margin: 10px 20px; }
-    #old-page .single-fysm-entry .join {
-      clear: both;
-      margin: 10px 20px; }
-    #old-page .single-fysm-entry .tags {
-      background: #ddd;
-      border-top: 1px solid #666;
-      padding: 4px;
-      margin: 0px;
-      text-align: center;
-      font-size: smaller; }
-  #old-page .fysm-submit td {
-    max-width: 30em;
-    font-size: smaller; }
-  #old-page .fysm-detail .back, #old-page .fysm-summarystrip .contact {
-    text-align: left;
-    float: left; }
-  #old-page .fysm-detail .forward, #old-page .fysm-summarystrip .website {
-    text-align: right;
-    float: right; }
-  #old-page .fysm-detail .up, #old-page .fysm-summarystrip .display-name {
-    text-align: center;
-    margin: auto; }
-  #old-page .fysm-navstrip, #old-page .fysm-summarystrip {
-    clear: both;
-    margin: 0;
-    padding: 0.5em 1em;
-    background: #BE2933;
-    border-bottom: 1px solid black; }
-    #old-page .fysm-navstrip p, #old-page .fysm-summarystrip p {
-      margin: 0;
-      min-width: 30%; }
-  #old-page .fysm-detail .single-fysm-entry h3 {
-    text-align: center;
-    clear: both; }
-  #old-page .fysm-detail .join-preview {
-    max-width: 600px;
-    margin: 1em auto; }
-    #old-page .fysm-detail .join-preview img {
-      max-width: 600px;
-      max-height: 600px;
-      display: block; }
   #old-page tr.private-info th:before {
     content: "\2020  "; }
   #old-page .group-detail-page h1 + p.group-status {

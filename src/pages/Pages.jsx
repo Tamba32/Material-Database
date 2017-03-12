@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactCSSTransitionReplace from 'react-css-transition-replace';
 
 import NewPage from './page/NewPage.jsx';
 import OldPage from './page/OldPage.jsx';
