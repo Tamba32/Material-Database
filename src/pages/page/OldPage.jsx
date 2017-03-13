@@ -8,7 +8,7 @@ const DBEntry = () => {
       <h2>Group Database Entry (Example: Academic Teaching Initiative)</h2>
       <div className="toolbox">
         <h2>Tools</h2>
-        <p>No tools available without 
+        <p>No tools available without&nbsp; 
           <a href="#">logging in</a>
           .
         </p>
@@ -53,7 +53,6 @@ const DBEntry = () => {
             <th>Meeting times</th>
             <td>Sundays 12pm-5pm</td>
           </tr>
-          
           <tr>
             <th colSpan="2">Recognition</th>
           </tr>
@@ -119,7 +118,7 @@ class OldPage extends React.Component {
           <div className="curuser">
             <div className="spacer"></div>
             <p>You are not logged in.</p>
-            <p><a href="">Login</a></p>
+            <p><a href="#">Login</a></p>
           </div>
           <h1>MIT Student Groups</h1>
           <h2>Search</h2>

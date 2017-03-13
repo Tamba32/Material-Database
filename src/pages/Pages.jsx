@@ -16,7 +16,7 @@ class Pages extends React.Component {
   }
   
   get tabs() {
-    return ['old', 'new', 'side by side'];
+    return ['old', 'new', 'both'];
   }
   
   setButton(tab) {
@@ -29,14 +29,14 @@ class Pages extends React.Component {
         return <OldPage/>;
       case 'new': 
         return <NewPage/>;
-      case 'side by side':
+      case 'both':
         return (
           <div id="pages">
             <div className="page-container">
-              <NewPage/>
+              <OldPage/>
             </div>
             <div className="page-container">
-              <OldPage/>
+              <NewPage/>
             </div>
           </div>
         );

@@ -11,10 +11,10 @@ const GROUPS = [
     desc: 'Appreciate film as art through focused viewing and discussion.',
     meetingTime: null,
     size: {
-      undergraduate: null,
-      graduate: null,
-      mitCommunity: null,
-      other: null
+      undergraduate: 0,
+      graduate: 0,
+      mitCommunity: 0,
+      other: 0
     }
   },
   { 
