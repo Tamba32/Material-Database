@@ -32,11 +32,11 @@ const Backstory = () => {
         View my work below.  The first tab, Old, is a remake of the current 
         ASA group page.  The second tab, New, is my rendition of the website, 
         the updated version.  The third tab, Both, is a side by side comparison of
-        the two pages.
+        the two layouts.
       </p>
       <p>
         Because this was just a small project and did not bother making the web
-        page design is not responsive.
+        page design responsive.
       </p>
       <p>
         You can check out the code for this project on Github&nbsp;
