@@ -23,8 +23,8 @@ class Details extends React.Component {
     return this.linkContent.map((link, i) => {
       let comma = i + 1 < this.linkContent.length ? ', ' :'';
       return (
-        <span>
-          <a key={i} href={link.anchor} target="_blank">{link.title}</a>
+        <span key={i}>
+          <a href={link.anchor} target="_blank">{link.title}</a>
           {comma}
         </span>
       );
