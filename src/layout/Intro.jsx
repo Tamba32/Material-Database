@@ -37,11 +37,13 @@ class Intro extends React.Component {
   render() {
     return (
       <section id="intro">
-        <div className="intro-card">
+        <div className="intro-card-container">
           <h2 className="intro-header">Material Design | MIT Student Group Database</h2>
-          <Buttons buttonState={this.state.tab}
-            setButtonState={this.setButton} buttons={this.tabs}/>
-          {this.content}
+          <div className="intro-card">
+            <Buttons buttonState={this.state.tab}
+              setButtonState={this.setButton} buttons={this.tabs}/>
+            {this.content}
+          </div>
         </div>
       </section>
     );

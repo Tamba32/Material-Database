@@ -2,10 +2,6 @@
 /*****************************************************************************/
 /* General: Style */
 /*****************************************************************************/
-#root2 {
-  padding: 60px 0;
-  background-color: #fafafa; }
-
 .grey {
   color: #616161; }
 
@@ -42,6 +38,23 @@
 /*****************************************************************************/
 /* Pages: Style */
 /*****************************************************************************/
+#page-card-container {
+  padding: 60px 0;
+  background-color: #fafafa; }
+
+#page-card {
+  background: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  margin: 0 50px 50px; }
+
+#pages-container {
+  position: relative; }
+
+#pages {
+  display: flex;
+  padding-bottom: 25px;
+  position: relative; }
+
 #new-page {
   font-family: "Roboto", sans-serif;
   background-color: #fafafa;
@@ -62,23 +75,10 @@
   text-decoration: unset;
   cursor: auto; }
 
-#pages-container {
-  position: relative; }
-
-#pages {
-  display: flex;
-  padding-bottom: 25px;
-  position: relative; }
-
 .page-container {
   width: 50%;
   display: inline-block;
   zoom: 0.5; }
-
-#page-card {
-  background: white;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  margin: 0 50px 50px; }
 
 /*****************************************************************************/
 /* Pages: Style */
@@ -90,9 +90,12 @@
   padding: 60px 0 0;
   font-family: "Roboto", sans-serif; }
 
-.intro-card {
+.intro-card-container {
   width: 740px;
-  margin: 0 auto 30px; }
+  margin: 0 auto; }
+
+.intro-card {
+  margin: 50px 0; }
 
 .intro-card p {
   margin-top: 29px;
@@ -110,6 +113,9 @@
   text-decoration: unset;
   cursor: auto; }
 
+.intro-card-content {
+  margin: 40px 0 30px; }
+
 .intro-header {
   font-weight: 600;
   cursor: default;
@@ -118,14 +124,11 @@
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-h3.intro-header {
+h2.intro-header {
   margin: 19px 0; }
 
 h3.intro-header {
   margin: 13px 0; }
-
-.intro-card-content {
-  margin: 40px 0 30px; }
 
 .intro-design-section {
   padding-bottom: 30px; }
