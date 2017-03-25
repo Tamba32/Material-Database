@@ -8,6 +8,6 @@ I knew I could design something better so, as a project, I decided to do just th
 
 View my work [here](https://tambamon.com/materialdb/). The first tab, Old, is a remake of the current ASA group page. The second tab, New, is my rendition of the website, the updated version. The third tab, Both, is a side by side comparison of the two pages.
 
-Because this was just a small project and did not bother making the web page responsive.
+Because this was just a small project, I did not bother making the web page responsive.
 
 Thanks for stopping by.
